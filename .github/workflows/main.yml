@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - uses: actions/setup-node@v2
         with:
           node-version: '14'      
-
+          
       # Runs a single command using the runners shell
-      - name: Update version
-        run: | 
-          - npm version minor
+      - name: Install deps
+        run: npm ci
